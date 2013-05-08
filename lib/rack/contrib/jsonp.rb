@@ -49,6 +49,7 @@ module Rack
         return bad_request unless valid_callback?(callback)
 
         response = pad(callback, response, headers, status)
+        status   = 200
 
         # No longer json, its javascript!
         headers['Content-Type'] = headers['Content-Type'].gsub('json', 'javascript')
