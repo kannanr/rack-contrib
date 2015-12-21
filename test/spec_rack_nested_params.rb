@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/mock'
 require 'rack/contrib/nested_params'
-require 'rack/methodoverride'
+require 'rack/method_override'
 
 describe Rack::NestedParams do
 

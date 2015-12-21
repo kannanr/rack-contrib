@@ -56,7 +56,7 @@ module Rack
 
         # Set new Content-Length, if it was set before we mutated the response body
         if headers['Content-Length']
-          length = bytesize(response[0])
+          length = response[0].bytesize
           headers['Content-Length'] = length.to_s
         end
       end
